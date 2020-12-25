@@ -11,7 +11,7 @@ app = Flask(__name__)
 def mail(subj, email, mess, per):
     addr_from = "herokusite@gmail.com"
     addr_to = "nataglushkova@gmail.com"
-    password = "hb1641012"
+    password = "Hb1641012"
 
     msg = MIMEMultipart()
     msg['From'] = addr_from
