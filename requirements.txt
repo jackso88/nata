@@ -1,5 +1,4 @@
 Flask
-smtplib
 gunicorn
 gevent
 
