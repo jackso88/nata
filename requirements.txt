@@ -1,5 +1,5 @@
 Flask
-PyYaml
+sqlalchemy
 gunicorn
 gevent
 
