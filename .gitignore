@@ -1,0 +1,6 @@
+# Ignore Configs
+configs
+*.yaml
+
+# Ignore cache folder
+__pycache__/

@@ -1,4 +1,5 @@
 import smtplib
+import yaml
 
 from flask import Flask, render_template, request, redirect, url_for
 from email.mime.multipart import MIMEMultipart
@@ -6,12 +7,15 @@ from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 
 
+with open("config.yaml", "r") as f:
+    config = yaml.safe_load(f)
+
 app = Flask(__name__)
 
 def mail(subj, email, mess, per):
-    addr_from = "herokusite@gmail.com"
-    addr_to = "nataglushkova@gmail.com"
-    password = "Hb1641012"
+    addr_from = config['mail']['from']
+    addr_to = config['mail']['to']
+    password = config['mail']['pass']
 
     msg = MIMEMultipart()
     msg['From'] = addr_from
